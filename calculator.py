@@ -39,15 +39,18 @@ while True:
             #solution = arithmetic.add(num1, num2)
             solution = reduce(lambda x, y: arithmetic.add(x,y), float_list)
         elif input_list[0] == '-': 
-            solution = arithmetic.subtract(num1, num2)
+            #solution = arithmetic.subtract(num1, num2)
+            solution = reduce(lambda x, y: arithmetic.subtract(x,y), float_list)
         elif input_list[0] == '*':
-            solution = arithmetic.multiply(num1, num2)
+            #solution = arithmetic.multiply(num1, num2)
+            solution = reduce(lambda x, y: arithmetic.multiply(x,y), float_list)
         elif input_list[0] == '/':
-            solution = arithmetic.divide(num1, num2)
+            #solution = arithmetic.divide(num1, num2)
+            solution = reduce(lambda x, y: arithmetic.divide(x,y), float_list)
         elif input_list[0] == 'square':
-            solution = arithmetic.square(num1)
+            solution = arithmetic.square(float_list[0])
         elif input_list[0] == 'cube':
-            solution = arithmetic.cube(num1)
+            solution = arithmetic.cube(float_list[0])
         elif input_list[0] == 'pow':
             solution = arithmetic.power(num1, num2)
         elif input_list[0] == 'mod':
