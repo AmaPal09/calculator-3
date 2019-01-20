@@ -52,9 +52,11 @@ while True:
         elif input_list[0] == 'cube':
             solution = arithmetic.cube(float_list[0])
         elif input_list[0] == 'pow':
-            solution = arithmetic.power(num1, num2)
+            #solution = arithmetic.power(num1, num2)
+            solution = reduce(lambda x, y: arithmetic.power(x,y), float_list)
         elif input_list[0] == 'mod':
-            solution = arithmetic.mod(num1, num2)
+            #solution = arithmetic.mod(num1, num2)
+            solution = reduce(lambda x, y: arithmetic.mod(x,y), float_list)
 
         else:
             print("Not a valid arithmetic operator. Please enter a real one.")
